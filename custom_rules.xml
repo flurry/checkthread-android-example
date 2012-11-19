@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <import file="checkthread.xml" />
+  <target name="-post-compile" depends="analyze">
+  </target>
+</project>

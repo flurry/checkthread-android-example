@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<threadpolicy version="1.0">
+	<class name="android.app.Activity">
+		<policy type="ThreadConfined" threadname="ThreadName.MAIN">
+			<method pattern="on.*" />
+		</policy>
+	</class>
+	<class pattern="android.*View">
+		<policy type="ThreadConfined" threadname="ThreadName.MAIN">
+			<method pattern=".*" />
+		</policy>
+	</class>
+</threadpolicy>

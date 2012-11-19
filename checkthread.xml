@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<project name="checkthread android analyze" default="analyze" basedir=".">
+  <!--
+      Example Ant script to run CheckThread task
+      Use: ant -f analyze.xml -lib libs
+  -->
+
+  <taskdef name="checkthread" classname="org.checkthread.anttask.CheckThreadTask" />
+  <property file="local.properties"/>
+  <property file="project.properties"/>
+  <property name="classes" value="${basedir}/bin/classes" />
+  <property name="classpath" value="${sdk.dir}/platforms/${target}/android.jar:${basedir}/libs:${classes}" />
+
+  <target name="analyze">
+    <checkthread targetpath="${classes}" classpath="${classpath}" verbose="false" />
+  </target>
+</project>
